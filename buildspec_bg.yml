@@ -23,10 +23,9 @@ phases:
       - echo check config 
       - kubectl config view --minify
       - echo check kubectl access
-      - kubectl get svc
-      
+      - kubectl get svc  
 
-  deployment:
+  build:
     commands:
       - echo Green deployment change
       - GREEN_APP = $(kubectl get svc coinbase-green -o=jsonpath='{.spec.selector.app}')
