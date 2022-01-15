@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kavishka/Documents/MSc/semester3/cloud-computing/CW/microservice/coinbase/coinbase/coinbase.csproj": {}
+    "C:\\Users\\MaheshiG\\Downloads\\coinbase\\coinbase\\coinbase.csproj": {}
   },
   "projects": {
-    "/Users/kavishka/Documents/MSc/semester3/cloud-computing/CW/microservice/coinbase/coinbase/coinbase.csproj": {
+    "C:\\Users\\MaheshiG\\Downloads\\coinbase\\coinbase\\coinbase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kavishka/Documents/MSc/semester3/cloud-computing/CW/microservice/coinbase/coinbase/coinbase.csproj",
+        "projectUniqueName": "C:\\Users\\MaheshiG\\Downloads\\coinbase\\coinbase\\coinbase.csproj",
         "projectName": "coinbase",
-        "projectPath": "/Users/kavishka/Documents/MSc/semester3/cloud-computing/CW/microservice/coinbase/coinbase/coinbase.csproj",
-        "packagesPath": "/Users/kavishka/.nuget/packages/",
-        "outputPath": "/Users/kavishka/Documents/MSc/semester3/cloud-computing/CW/microservice/coinbase/coinbase/obj/",
+        "projectPath": "C:\\Users\\MaheshiG\\Downloads\\coinbase\\coinbase\\coinbase.csproj",
+        "packagesPath": "C:\\Users\\MaheshiG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MaheshiG\\Downloads\\coinbase\\coinbase\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/kavishka/.config/NuGet/NuGet.Config"
+          "C:\\Users\\MaheshiG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://build.ci.boligmappa.org/repository/nuget-hosted/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,6 +58,10 @@
               "target": "Package",
               "version": "[3.0.1, )"
             },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.14, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -75,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

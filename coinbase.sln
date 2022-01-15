@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.810.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "coinbase", "coinbase\coinbase.csproj", "{6F0BA4F9-5CF1-4477-8057-26640CD3866D}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DAF00CCB-C535-4F75-9123-9454489FD7BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6F0BA4F9-5CF1-4477-8057-26640CD3866D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F0BA4F9-5CF1-4477-8057-26640CD3866D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F0BA4F9-5CF1-4477-8057-26640CD3866D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF00CCB-C535-4F75-9123-9454489FD7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAF00CCB-C535-4F75-9123-9454489FD7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF00CCB-C535-4F75-9123-9454489FD7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAF00CCB-C535-4F75-9123-9454489FD7BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

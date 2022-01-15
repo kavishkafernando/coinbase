@@ -12,16 +12,16 @@ namespace coinbase.Controllers
     [ApiController]
     public class CoinbaseController : ControllerBase
     {
-        private readonly CoinContext _dbContext;
+        private readonly DatabaseContext _dbContext;
 
-        public CoinbaseController(CoinContext dbContext)
+        public CoinbaseController(DatabaseContext dbContext)
         {
             this._dbContext = dbContext;
         }
 
         // GET: api/Coinbase
         [HttpGet]
-        public IEnumerable<Coin> GetCoinList()
+        public IEnumerable<Coin> GetAll()
         {
             var CoinsList = this._dbContext.Coins.ToList();
             return CoinsList;
@@ -29,24 +29,40 @@ namespace coinbase.Controllers
 
         // GET: api/Coinbase/5
         [HttpGet("{id}", Name = "Get")]
-        public Coin GetCoinById(int id)
+        public Coin Get(int id)
         {
             var coin = this._dbContext.Coins.FirstOrDefault(coin => coin.coinId == id);
             return coin;
         }
 
         // POST: api/Coinbase
+        //[HttpPost]
+        //public async Task<Coin> Post([FromBody] Coin value)
+        //{
+        //        await this._dbContext.Coins.AddAsync(value);
+        //        var save = await this._dbContext.SaveChangesAsync();
+        //        return value;
+        //}
+
         [HttpPost]
-        public async Task<Coin> AddCoin([FromBody] Coin value)
+        public async Task<bool> Post([FromBody] Coin request)
         {
-                await this._dbContext.Coins.AddAsync(value);
+            try
+            {
+                await this._dbContext.Coins.AddAsync(request);
                 var save = await this._dbContext.SaveChangesAsync();
-                return value;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
+
 
         // PUT: api/Coinbase/5
         [HttpPut("{id}")]
-        public async Task<bool> UpdateCoin(int id, [FromBody] Coin value)
+        public async Task<bool> Put(int id, [FromBody] Coin value)
         {
             try
             {
@@ -67,7 +83,7 @@ namespace coinbase.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public bool DeleteCoin(int id)
+        public bool Delete(int id)
         {
             try
             {

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  coinbase:
+    image: ${DOCKER_REGISTRY-}coinbase
+    build:
+      context: .
+      dockerfile: coinbase/Dockerfile
