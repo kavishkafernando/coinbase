@@ -6,20 +6,20 @@ metadata:
     app.kubernetes.io/instance: coinbase-instance
     app.kubernetes.io/version: '1.0.0'
     app.kubernetes.io/managed-by: kubectl
-  name: coinbase-demo-deployment
+  name: green-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: coinbase-demo
+      app: coinbase-green
   template:
     metadata:
       labels:
-        app: coinbase-demo
+        app: coinbase-green
     spec:
       containers:
         - image: 482395977098.dkr.ecr.us-east-1.amazonaws.com/coinbase:v1
           imagePullPolicy: Always
-          name: coinbase-demo
+          name: coinbase-green
           ports:
             - containerPort: 5000

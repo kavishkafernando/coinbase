@@ -7,10 +7,10 @@ metadata:
     app.kubernetes.io/version: "1.0.0"
     app.kubernetes.io/component: backend
     app.kubernetes.io/managed-by: kubectl
-  name: coinbase-demo
+  name: coinbase-blue
 spec:
   selector:
-    app: coinbase-demo
+    app: coinbase-blue
   type: LoadBalancer
   ports:
    -  protocol: TCP
