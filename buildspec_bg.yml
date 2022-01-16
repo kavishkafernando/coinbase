@@ -29,10 +29,10 @@ phases:
     commands:
       - echo Green deployment change
       - GREEN_APP=$(kubectl get svc coinbase-green -o=jsonpath='{.spec.selector.app}')
+      - BLUE_APP=$(kubectl get svc coinbase-blue -o=jsonpath='{.spec.selector.app}')
       - echo $GREEN_APP
       - kubectl patch svc coinbase-blue -p '{"spec":{"selector":{"app":"'${GREEN_APP}'"}}}'
       - echo Blue deployment change
-      - BLUE_APP=$(kubectl get svc coinbase-blue -o=jsonpath='{.spec.selector.app}')
       - echo $BLUE_APP
       - kubectl patch svc coinbase-green -p '{"spec":{"selector":{"app":"'${BLUE_APP}'"}}}'
       - kubectl get svc -o json
