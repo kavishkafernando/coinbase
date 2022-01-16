@@ -2,8 +2,10 @@
 
 GREEN_POINT_APP=GREEN_APP=$(kubectl get svc coinbase-green -o=jsonpath='{.spec.selector.app}')
 
+echo "Green is pointed to"
+echo $GREEN_POINT_APP
 
-if [$GREEN_POINT_APP == "coinbase-green"];then
+if [[ $GREEN_POINT_APP == "coinbase-green" ]];then
   kubectl apply -f deployments/blue_deployment.yaml
   kubectl rollout restart -f deployments/blue_deployment.yaml
   echo "Deployed in Blue pods"
