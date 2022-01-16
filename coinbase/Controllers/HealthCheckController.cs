@@ -13,7 +13,7 @@ namespace coinbase.Controllers
         [HttpGet("health")]
         public IActionResult Index()
         {
-            return Ok("Success");
+            return Ok("Success v2");
         }
     }
 }
