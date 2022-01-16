@@ -221,4 +221,8 @@ C:\Users\MaheshiG\Downloads\coinbase\coinbase\obj\Debug\netcoreapp3.1\coinbase.c
 C:\Users\MaheshiG\Downloads\coinbase\coinbase\obj\Debug\netcoreapp3.1\coinbase.dll
 C:\Users\MaheshiG\Downloads\coinbase\coinbase\obj\Debug\netcoreapp3.1\coinbase.pdb
 C:\Users\MaheshiG\Downloads\coinbase\coinbase\obj\Debug\netcoreapp3.1\coinbase.genruntimeconfig.cache
-C:\Users\MaheshiG\Downloads\coinbase\coinbase\obj\Debug\netcoreapp3.1\coinbase.csproj.AssemblyReference.cache
+C:\Users\MaheshiG\Downloads\coinbase\coinbase\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\MaheshiG\Downloads\coinbase\coinbase\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\MaheshiG\Downloads\coinbase\coinbase\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\MaheshiG\Downloads\coinbase\coinbase\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\MaheshiG\Downloads\coinbase\coinbase\obj\Debug\netcoreapp3.1\coinbase.MvcApplicationPartsAssemblyInfo.cs
