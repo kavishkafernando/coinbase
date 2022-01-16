@@ -1,17 +1,23 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace coinbase
 {
-	public class Startup
+    public class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -58,11 +64,14 @@ namespace coinbase
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Boligmappa.MicroServices.API v1"));
-
             }
-            
+            app.UseSwagger(c => {
+                c.RouteTemplate = "docs/{documentname}/swagger.json";
+            });
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/docs/v1/swagger.json", "Coinbase v1");
+                c.RoutePrefix = "docs";
+            });
 
             app.UseHttpsRedirection();
 
