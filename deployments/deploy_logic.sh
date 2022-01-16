@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-GREEN_POINT_APP=GREEN_APP=$(kubectl get svc coinbase-green -o=jsonpath='{.spec.selector.app}')
+GREEN_POINT_APP=$(kubectl get svc coinbase-green -o=jsonpath='{.spec.selector.app}')
 
 echo "Green is pointed to"
 echo $GREEN_POINT_APP
